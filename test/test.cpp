@@ -1,7 +1,3 @@
-//
-// Created by qiao liang on 2019-11-17.
-//
-
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 #include "Person.h"

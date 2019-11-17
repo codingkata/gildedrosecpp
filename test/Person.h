@@ -1,7 +1,3 @@
-//
-// Created by qiao liang on 2019-11-17.
-//
-
 #ifndef GILDEDROSE_PERSON_H
 #define GILDEDROSE_PERSON_H
 

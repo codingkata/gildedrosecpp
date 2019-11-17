@@ -1,12 +1,15 @@
 cmake_minimum_required(VERSION 3.13)
-project(gildedRose)
+project(main)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-add_subdirectory(lib/gtest-1.8.1)
-include_directories(lib/gtest-1.8.1/googletest/include)
-include_directories(lib/gtest-1.8.1/googlemock/include)
+# Add the source in project root directory
+aux_source_directory(. DIRSRCS)
+# Add header file include directories
+include_directories(./ ./src)
 
+# Add block directories
+add_subdirectory(src)
+add_subdirectory(test)
+# Target
+add_executable(main ${DIRSRCS})
+target_link_libraries(main gildedRose)
 
-set(SOURCE_FILES main.cpp test/Person.h test/test.cpp test/GildedRose.cpp test/GildedRose.h test/GildedRoseTest.cpp)
-add_executable(gildedRose ${SOURCE_FILES} test/Person.h test/test.cpp test/GildedRose.cpp test/GildedRose.h test/GildedRoseTest.cpp)
-target_link_libraries(gildedRose gtest gtest_main)
